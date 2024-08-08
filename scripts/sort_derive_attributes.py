@@ -1,4 +1,4 @@
-#! /usr/bin/python
+#! /usr/bin/env python
 # Sorts the traits listed for #derive attributes.
 # Copyright (C) 2024 kaoru  <https://www.tetengo.org>
 
