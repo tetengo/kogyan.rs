@@ -1,4 +1,4 @@
-#! /usr/bin/python
+#! /usr/bin/env python
 # Check the use declaration order.
 # Copyright (C) 2024 kaoru  <https://www.tetengo.org>
 
