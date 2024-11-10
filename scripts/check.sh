@@ -2,7 +2,13 @@
 # Checks the scripts
 # Copyright (C) 2024 kaoru  <https://www.tetengo.org/>
 
-for f in $(dirname $0)/*.py; do
+if [ "x$1" = "x" ]; then
+    BASEDIR=$(dirname $0)
+else
+    BASEDIR=$1
+fi
+
+for f in $BASEDIR/*.py; do
     echo "Checking $(basename $f)..."
     mypy "$f"
     black "$f"
