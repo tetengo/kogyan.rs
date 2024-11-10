@@ -1,4 +1,4 @@
-rem @echo off
+@echo off
 rem Checks the scripts
 rem Copyright (C) 2024 kaoru  <https://www.tetengo.org/>
 
