@@ -8,9 +8,9 @@ else
     BASEDIR=$1
 fi
 
+echo "Checking $BASEDIR..."
+mypy "$BASEDIR"
+black --quiet "$BASEDIR"
 for f in $BASEDIR/*.py; do
-    echo "Checking $(basename $f)..."
-    mypy "$f"
-    black "$f"
     isort --profile black "$f"
 done

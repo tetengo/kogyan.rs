@@ -9,12 +9,12 @@ if "%1" == "" (
     set BASEDIR=%1
 )
 
+echo Checking %BASEDIR%...
+mypy %BASEDIR%
+if errorlevel 1 exit /b 1
+black --quiet %BASEDIR%
+if errorlevel 1 exit /b 1
 for %%f in (%BASEDIR%%\*.py) do (
-    echo Checking %%~nxf...
-    mypy %%f
-    if errorlevel 1 exit /b 1
-    black %%f
-    if errorlevel 1 exit /b 1
     isort --profile black %%f
     if errorlevel 1 exit /b 1
 )
