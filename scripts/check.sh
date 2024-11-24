@@ -9,7 +9,7 @@ else
 fi
 
 echo "Checking $BASEDIR..."
-mypy "$BASEDIR"
+mypy --strict "$BASEDIR"
 black --quiet "$BASEDIR"
 for f in $BASEDIR/*.py; do
     isort --profile black "$f"

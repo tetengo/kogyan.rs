@@ -9,7 +9,7 @@ from pathlib import Path
 import list_sources
 
 
-def main(args: list[str]):
+def main(args: list[str]) -> None:
     if len(args) < 1:
         print("Usage: sort_derive_attributes.py base_directory_path", file=sys.stderr)
         sys.exit(0)
@@ -19,7 +19,7 @@ def main(args: list[str]):
         sort_derive_attributes(path)
 
 
-def sort_derive_attributes(path: Path):
+def sort_derive_attributes(path: Path) -> None:
     input_lines = load_from_file(path)
     original_lines = input_lines.copy()
     output_lines = []
@@ -47,7 +47,7 @@ def load_from_file(path: Path) -> list[str]:
         return file.readlines()
 
 
-def save_to_file(lines: list[str], path: Path):
+def save_to_file(lines: list[str], path: Path) -> None:
     with path.open(mode="w", encoding="UTF-8") as file:
         file.writelines(lines)
 

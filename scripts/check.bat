@@ -10,7 +10,7 @@ if "%1" == "" (
 )
 
 echo Checking %BASEDIR%...
-mypy %BASEDIR%
+mypy --strict %BASEDIR%
 if errorlevel 1 exit /b 1
 black --quiet %BASEDIR%
 if errorlevel 1 exit /b 1
