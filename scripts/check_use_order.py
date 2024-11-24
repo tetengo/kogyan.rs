@@ -9,7 +9,7 @@ from pathlib import Path
 import list_sources
 
 
-def main(args: list[str]):
+def main(args: list[str]) -> None:
     if len(args) < 1:
         print("Usage: check_use_order.py base_directory_path", file=sys.stderr)
         sys.exit(0)
