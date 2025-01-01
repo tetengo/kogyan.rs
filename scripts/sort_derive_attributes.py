@@ -1,6 +1,6 @@
 #! /usr/bin/env python
 # Sorts the traits listed for #derive attributes.
-# Copyright (C) 2024 kaoru  <https://www.tetengo.org>
+# Copyright (C) 2024-2025 kaoru  <https://www.tetengo.org>
 
 import re
 import sys
