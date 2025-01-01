@@ -1,6 +1,6 @@
 #! /bin/sh
 # Checks the scripts
-# Copyright (C) 2024 kaoru  <https://www.tetengo.org/>
+# Copyright (C) 2024-2025 kaoru  <https://www.tetengo.org/>
 
 if [ "x$1" = "x" ]; then
     BASEDIR=$(dirname $0)

@@ -1,6 +1,6 @@
 @echo off
 rem Checks the scripts
-rem Copyright (C) 2024 kaoru  <https://www.tetengo.org/>
+rem Copyright (C) 2024-2025 kaoru  <https://www.tetengo.org/>
 
 setlocal
 if "%1" == "" (
