@@ -1,6 +1,6 @@
 #! /usr/bin/env python
 # Check the use declaration order.
-# Copyright (C) 2024-2025 kaoru  <https://www.tetengo.org>
+# Copyright (C) 2024-2026 kaoru  <https://www.tetengo.org>
 
 import re
 import sys

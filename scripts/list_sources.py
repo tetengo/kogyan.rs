@@ -1,5 +1,5 @@
 # Lists the Rust program sources.
-# Copyright (C) 2024-2025 kaoru  <https://www.tetengo.org>
+# Copyright (C) 2024-2026 kaoru  <https://www.tetengo.org>
 
 from pathlib import Path
 
