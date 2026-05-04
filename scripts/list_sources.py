@@ -3,6 +3,13 @@
 
 from pathlib import Path
 
+IGNORED_DIRECTORIES = {".git", "target", "doc", "package"}
+
 
 def list_rs_files(base_path: Path) -> list[Path]:
-    return [p for p in base_path.rglob("*.rs") if not ".git" in p.parts]
+    return [
+        path
+        for path in base_path.rglob("*.rs")
+        if path.is_file()
+        and not any(part in IGNORED_DIRECTORIES for part in path.parts)
+    ]
