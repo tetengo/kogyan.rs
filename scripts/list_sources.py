@@ -3,7 +3,7 @@
 
 from pathlib import Path
 
-IGNORED_DIRECTORIES = {".git", "target", "doc", "package"}
+IGNORED_DIRECTORIES = {".git", "target"}
 
 
 def list_rs_files(base_path: Path) -> list[Path]:
@@ -11,7 +11,5 @@ def list_rs_files(base_path: Path) -> list[Path]:
         path
         for path in base_path.rglob("*.rs")
         if path.is_file()
-        and not any(
-            part in IGNORED_DIRECTORIES for part in path.relative_to(base_path).parts
-        )
+        and path.relative_to(base_path).parts[0] not in IGNORED_DIRECTORIES
     ]
