@@ -11,5 +11,7 @@ def list_rs_files(base_path: Path) -> list[Path]:
         path
         for path in base_path.rglob("*.rs")
         if path.is_file()
-        and not any(part in IGNORED_DIRECTORIES for part in path.parts)
+        and not any(
+            part in IGNORED_DIRECTORIES for part in path.relative_to(base_path).parts
+        )
     ]
